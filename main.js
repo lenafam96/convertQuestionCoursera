@@ -20,6 +20,8 @@ const format = () => {
 }
 
 const copy = () => {
+    input = document.getElementById("input-area")
+    input.value = "";
     output = document.getElementById("output-area");
     output.select();
     if (output.value == "") {
