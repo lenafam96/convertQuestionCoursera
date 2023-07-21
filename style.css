@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 100px auto;
+    margin: 10px auto;
     flex-direction: column;
 }
 
@@ -12,7 +12,7 @@
     width: 200px;
     height: 60px;
     border-radius: 5px;
-    margin: 32px auto;
+    margin: 24px auto;
 }
 
 textarea{
