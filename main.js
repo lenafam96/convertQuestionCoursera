@@ -16,7 +16,7 @@ const format = () => {
     
     stringResult = question.join("\n");
     for (let i = 0; i < filterArray.length; i++) {
-        stringResult += "\n" + alphabet[i] + ". " + filterArray[i];
+        stringResult += "\n" + alphabet[i] + ". " + filterArray[i].trim();
     }
     output.innerHTML = stringResult;
 }
