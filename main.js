@@ -6,15 +6,17 @@ const format = () => {
         return;
     }
     result = input.replace(/^Question \d*/gm, "");
-    result = result.replace("1 point", "");
-    array = result.split("\n");
+    // result = result.replace("1 point", "");
+    result = result.split("1 point");
+    question = result[0].split("\n");
+    question = question.filter((item) => item != "");
+    answer = result[1];
+    array = answer.split("\n");
     filterArray = array.filter((item) => item != "");
-    if (filterArray.includes("Question")) {
-
-    }
-    stringResult = filterArray[0];
-    for (let i = 1; i < filterArray.length; i++) {
-        stringResult += "\n" + alphabet[i-1] + ". " + filterArray[i];
+    
+    stringResult = question.join("\n");
+    for (let i = 0; i < filterArray.length; i++) {
+        stringResult += "\n" + alphabet[i] + ". " + filterArray[i];
     }
     output.innerHTML = stringResult;
 }
